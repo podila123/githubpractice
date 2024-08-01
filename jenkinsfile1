@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    tools {
+        nodejs '14.2.0'
+    }
+    stages {
+        stage('Example') {
+            steps {
+              git 'https://github.com/nani0231/javaapp.git'  
+                sh 'npm version'
+            }
+        }
+    }
+  } 
